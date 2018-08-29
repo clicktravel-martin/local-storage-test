@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local storage test</title>
+</head>
+<body>
+
+<pre id="message"></pre>
+
+<script>
+    try {
+        window.localStorage.setItem('test', 'test');
+        window.localStorage.removeItem('test');
+        window.document.getElementById('message').textContent = 'Local storage is enabled';
+    } catch (error) {
+        window.document.getElementById('message').textContent = 'Local storage appears to be disabled. Error details:\n' + error.name + '\n' + error.message;
+    }
+</script>
+
+</body>
+</html>
